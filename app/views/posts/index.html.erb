@@ -13,8 +13,9 @@
         <div class="col-md-12" id="blog-img">
           <%= image_tag(post.image_url, class: "img-responsive") %>
         </div>
-        <div class="col-md-11"> 
-          <%= post.body %>
+        <div class="col-md-11" id="post-intro"> 
+
+        <%= post.body %>
         </div>
         <div class="col-md-12">
           <%= link_to 'Show', post %>
