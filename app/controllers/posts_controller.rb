@@ -8,12 +8,11 @@ class PostsController < ApplicationController
     @posts = Post.paginate(:page => params[:page], :per_page => 2)
   end
 
-  # GET /posts/1
-  # GET /posts/1.json
+  # GET /products/1
+  # GET /products/1.json
   def show
-
+    @comments = @post.comments.order("created_at DESC")
   end
-
   # GET /posts/new
   def new
     @post = Post.new
