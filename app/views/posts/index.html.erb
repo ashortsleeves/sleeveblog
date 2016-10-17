@@ -29,5 +29,8 @@
 
 
 <br>
-
+<% if signed_in? && current_user.admin? %>  
+<div class="container">
 <%= link_to 'New Post', new_post_path, :class => "btn btn-xs btn-warning" %>
+</div>
+<% end %>
