@@ -1,15 +1,17 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-
+  load_and_authorize_resource
   # GET /posts
   # GET /posts.json
   def index
     @posts = Post.all
+    @posts = Post.paginate(:page => params[:page], :per_page => 2)
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
+
   end
 
   # GET /posts/new

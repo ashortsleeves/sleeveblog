@@ -16,15 +16,18 @@
         <div class="col-md-11" id="post-intro"> 
 
         <%= post.body %>
+
         </div>
         <div class="col-md-12">
-          <%= link_to 'Show', post %>
+          <%= link_to 'Read More', post, :class => "btn btn-xs btn-info" %>
         </div>
       </div>
+
     <% end %>
+        <%= will_paginate @posts %>  
 </div>
 
 
 <br>
 
-<%= link_to 'New Post', new_post_path %>
+<%= link_to 'New Post', new_post_path, :class => "btn btn-xs btn-warning" %>
